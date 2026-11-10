@@ -1,0 +1,11 @@
+Le projet exploration_dvf.ipynb permet d'obtenir un jeu de données clair et lisible en mettant en avant les caractéristiques des biens immobiliers dans le département de l'ile et Vilaine (le nombre deventes, le prix médian du m², la surface médiane, le prix médian du m² pour un appartement et pour une maison). 
+
+Les données brutes ont été extraites du site data.gouv
+
+Selon le dataset, une ligne correspond à un bien et non à une vente. Nous avons donc conserver uniquement les mutations qui correspondent à un seul bien (selon l'id de la mutation). Le dataset est alors passé de 60245 lignes à seulement, 13251 biens.
+Pour la suite du projet, une colonne prix_m² a été ajoutée (calculée en divisant la valeur foncière par la surface réelle bâtie).
+La décision d'exclure les biens avec un prix au mètre carré en dehors de la fourchette [300:15000]€ a été prise dans le but de conserver uniquement les ventes réalistes. Le dataset se compose alors de 13136 biens. 
+Dans le but d'avoir des données réalistes, seules les communes avec plus de 5 ventes sont conservées. 
+
+Le résultat présente un dataset qui met en lumière l'écart entre les biens vendus sur la côte et dans l'espace rural du département (le classement des communes en fonction du prix au m²). 
+
