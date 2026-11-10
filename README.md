@@ -1,5 +1,7 @@
 # DVF Ille Et Vilaine
 
+![Carte des prix au m² par commune](output/map_35_prix_median.png)
+
 Le projet exploration_dvf.ipynb permet d'obtenir un jeu de données clair et lisible en mettant en avant les caractéristiques des biens immobiliers dans le département de l'ile et Vilaine (le nombre deventes, le prix médian du m², la surface médiane, le prix médian du m² pour un appartement et pour une maison). 
 
 Les données brutes ont été extraites du site data.gouv
