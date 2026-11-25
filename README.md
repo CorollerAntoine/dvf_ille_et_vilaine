@@ -54,6 +54,17 @@ Télécharger le fichier du département 35 (année 2025) depuis data.gouv
 et le placer dans `data/35.csv.gz`, puis exécuter les notebooks dans l'ordre :
 `exploration_dvf.ipynb` puis `visualisation.ipynb`.
 
+## Tableau de bord Power BI
+
+![Tableau de bord](powerbi/dvf_35_dashboard.png)
+
+Rapport interactif construit sur le jeu de données produit : indicateurs clés,
+classement des communes, carte, et segment permettant d'exclure les communes
+à faible effectif. Mesures DAX pour le prix médian pondéré par le volume de ventes.
+
+- Fichier source : `powerbi/dvf35.pbix`
+- Version PDF : `powerbi/dvf35_dashboard.pdf`
+
 ## Stack
 
-Python 3.12, Pandas, Numpy, Plotly, Git
+Python 3.12, Pandas, Plotly, Power BI (DAX, Power Query), PostgreSQL, Git
