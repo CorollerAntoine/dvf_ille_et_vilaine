@@ -2,14 +2,14 @@
 
 ![Carte des prix au m² par commune](output/map_35_prix_median.png)
 
-Le projet exploration_dvf.ipynb permet d'obtenir un jeu de données clair et lisible en mettant en avant les caractéristiques des biens immobiliers dans le département de l'ille-et-Vilaine (le nombres de ventes, le prix médian du m², la surface médiane, le prix médian du m² pour un appartement et pour une maison). 
+Le projet exploration_dvf.ipynb permet d'obtenir un jeu de données clair et lisible en mettant en avant les caractéristiques des biens immobiliers dans le département de l'Ille-et-Vilaine (le nombre de ventes, le prix médian du m², la surface médiane, le prix médian du m² pour un appartement et pour une maison). 
 
 Les données brutes ont été extraites du site data.gouv : https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres-geolocalisees 
 Les données extraites concernent le département de l'ille-et-Vilaine (35) en Bretagne.
 
-Selon le dataset, une ligne correspond à un bien et non à une vente. le projet permet de conserver uniquement les mutations qui correspondent à un seul bien (selon l'id de la mutation). Le dataset est alors passé de 60 245 lignes à seulement, 13 251 biens.
+Selon le dataset, une ligne correspond à un bien et non à une vente. Le projet permet de conserver uniquement les mutations qui correspondent à un seul bien (selon l'id de la mutation). Le dataset est alors passé de 60 245 lignes à seulement, 13 251 biens.
 Pour la suite du projet, une colonne prix_m² a été ajoutée (calculée en divisant la valeur foncière par la surface réelle bâtie).
-La décision d'exclure les biens avec un prix au mètre carré en dehors de la fourchette [300:15 000]€ a été prise dans le but de conserver uniquement les ventes réalistes. Le dataset se compose alors de 13136 biens. 
+La décision d'exclure les biens avec un prix au mètre carré en dehors de la fourchette [300:15 000]€ a été prise dans le but de conserver uniquement les ventes réalistes. Le dataset se compose alors de 13 136 biens. 
 Dans le but d'avoir des données réalistes, seules les communes avec au moins 5 ventes sont conservées. 
 
 ## Résultats
@@ -23,14 +23,16 @@ Il permet également d'afficher une carte intéractive avec les informations vil
 
 | Colonne | Type | Description |
 |---|---|---|
-| `code_commune` | texte | Code INSEE de la commune |
+| `code_commune` | entier | Code INSEE de la commune |
 | `nom_commune` | texte | Nom de la commune |
 | `nb_ventes` | entier | Nombre de transactions retenues |
 | `prix_median` | entier | Prix médian au m² (€) |
 | `surface_mediane` | entier | Surface bâtie médiane (m²) |
-| `prix_median_maison` | entier | Prix médian au m² des maisons (€) |
-| `prix_median_appartement` | entier | Prix médian au m² des appartements (€) |
 | `latitude` / `longitude` | décimal | Barycentre des transactions de la commune |
+| `prix_median_appartement` | entier | Prix médian au m² des appartements (€) |
+| `prix_median_maison` | entier | Prix médian au m² des maisons (€) |
+
+
 
 ## Limites
 Le prix de la mutation est attribué au bien principal, les dépendances sont incluses dans le prix mais pas dans la surface.
@@ -39,7 +41,7 @@ L’effet de composition interdit de comparer directement maisons et appartement
 Les coordonnées sont le barycentre des transactions, pas le centre administratif
 
 ## Reproduire
-
+(Sous windows)
 ```bash
 git clone https://github.com/CorollerAntoine/dvf_ille_et_vilaine.git
 cd dvf_ille_et_vilaine
